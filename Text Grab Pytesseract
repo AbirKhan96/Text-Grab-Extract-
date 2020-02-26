@@ -1,0 +1,15 @@
+from PIL import Image
+import pytesseract as pt
+import argparse
+import cv2
+import os
+
+#pytesseract.pytesseract.tesseract_cmd = r'C:/Users/Abir Khan/Downloads/tesseract-ocr-setup-4.00.00dev.exe'
+pt.pytesseract.tesseract_cmd = r'C:/Program Files/Tesseract-OCR/tesseract.exe'
+img = Image.open("C:/Users/Abir Khan/Desktop/Genesys/img 1 zoom.png")
+text = pt.image_to_string(img)
+print(text)
+
+
+#!pip install opencv-python
+#!pip install pytesseract
